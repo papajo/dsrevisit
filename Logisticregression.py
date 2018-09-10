@@ -15,7 +15,7 @@ logreg.fit(X, Y)
 #Plot the decision boundary, assign a color to each
 #point in the mesh[x_min, x_max]x[y_min, y_max]
 x_min, x_max = X[:, 0].min() - .5, X[:, 0].max() + .5
-y_min, y_max = Y[:, 1].min() - .5, Y[:, 1].max() + .5
+y_min, y_max = X[:, 1].min() - .5, X[:, 1].max() + .5
 xx, yy = np.meshgrid(np.arange(x_min, x_max, h), np.arange(y_min, y_max, h))
 Z = logreg.predict(np.c_[xx.ravel(), yy.ravel()])
 
